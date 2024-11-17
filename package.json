@@ -1,0 +1,25 @@
+{
+  "name": "sudokuapp",
+  "version": "0.1.0",
+  "description": "A sudoku app",
+  "main": "js/electron.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twanman1412/sudokuApp.git"
+  },
+  "keywords": [
+    "sudoku"
+  ],
+  "author": "Twan Kuipers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twanman1412/sudokuApp/issues"
+  },
+  "homepage": "https://github.com/twanman1412/sudokuApp#readme",
+  "dependencies": {
+    "electron": "^33.2.1"
+  }
+}
