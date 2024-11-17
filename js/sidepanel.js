@@ -23,7 +23,6 @@ function loadFromFile(evt) {
 function loadFromString() {
 
 	const string = document.querySelector('#textfield').value;
-	console.log(document.querySelector('#textfield'));
 	loadBoard(string);
 }
 
