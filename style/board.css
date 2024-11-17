@@ -1,0 +1,55 @@
+div#main {
+
+	display: flex;
+	flex-wrap: wrap;
+
+	width: 910px;
+	height: 910px;
+
+	box-sizing: border-box;
+	border: 2px black solid;
+}
+
+div.box {
+
+	display: flex;
+	flex-wrap: wrap;
+
+	width: 300px;
+	height: 300px;
+
+	border: 1px black solid;
+}
+
+div.cell {
+
+	width: 100px;
+	height: 100px;
+
+	box-sizing: border-box;
+	padding-top: 16px;
+}
+
+div.cell.c0 {
+
+	background-color: #aaa;
+}
+
+div.cell.c1 {
+
+	background-color: #bbb;
+}
+
+div.cell.selected {
+
+	box-sizing: border-box;
+	border: 5px blue solid;
+
+	padding-top: 11px;
+}
+
+div.cell p {
+
+	font-size: 50px;
+	text-align: center;
+}
