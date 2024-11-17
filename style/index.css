@@ -2,3 +2,14 @@
 	padding: 0;
 	margin: 0;
 }
+
+html {
+	width: 100vw;
+	height: 100vh;
+}
+
+body {
+	display: flex;
+
+	margin: calc((100vh - 910px) / 2) 50px calc((100vh - 910px) / 2);
+}

@@ -6,13 +6,44 @@
 	<script type='module' src='./js/main.js'></script>
 	<script type='module' src='./js/createBoard.js'></script>
 	<script type='module' src='./js/cellLogic.js'></script>
+	<script type='module' src='./js/sidepanel.js'></script>
 
 	<link rel='stylesheet' href='./style/board.css' />
 	<link rel='stylesheet' href='./style/index.css' />
+	<link rel='stylesheet' href='./style/sidepanel.css' />
 </head>
 
 <body>
 	<div id='main'>
+	</div>
+
+	<div id='sidepanel'>
+		<div id='controls'>
+			<div id='loadfile'>
+				Load from file
+				<input type='file' id='loadfile'></input>
+			</div>
+			<div>
+				<div id='loadstring'>Load from string</div>
+				<input type='text' id='textfield'></input>
+			</div>
+		</div>
+		<div id='numbers'>
+			<div id='1' class='numbutton'>1</div>
+			<div id='2' class='numbutton'>2</div>
+			<div id='3' class='numbutton'>3</div>
+			<div id='4' class='numbutton'>4</div>
+			<div id='5' class='numbutton'>5</div>
+			<div id='6' class='numbutton'>6</div>
+			<div id='7' class='numbutton'>7</div>
+			<div id='8' class='numbutton'>8</div>
+			<div id='9' class='numbutton'>9</div>
+			<div id='Delete' class='numbutton'>del</div>
+			<div id='0' class='numbutton'>0</div>
+			<div id='Backspace' class='numbutton'>clear</div>
+		</div>
+		<div id='branches'>
+		</div>
 	</div>
 </body>
 

@@ -1,0 +1,40 @@
+div#sidepanel {
+
+	background-color: lightgray;
+
+	width: calc(100% - 960px);
+	margin-left: 50px;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div#sidepanel div {
+
+	width: 50%;
+	height: 50%;
+
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+div#numbers {
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div#numbers div {
+
+	height: calc(25% - 10px);
+	width: calc(100% / 3 - 10px);
+	margin: 5px;
+}
+
+div#numbers div.numbutton {
+
+	border-radius: 5px;
+	border: 1px black solid;
+
+	text-align: center;
+}

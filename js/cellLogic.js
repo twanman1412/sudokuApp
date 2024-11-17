@@ -21,20 +21,32 @@ export function addCell(cell, boxId, cellId) {
 	});
 }
 
-document.addEventListener('keydown', evt => {
+export function setNumber({ number, cell, boxId, cellId }) {
 
-	if (evt.key === "Shift" || evt.key === "Control") {
+	if (!cell) {
+		if (!boxId || !cellId) {
+			cell = selected;
+		} else if (board[boxId] && board[boxId][cellId]) {
+			cell = board[boxId][cellId];
+		} else {
+			console.warn(`Setting number to undefined box/cell combo ${boxId}/${cellId}`);
+		}
+	};
 
-		console.log(`hints mode ${hints ? "disabled" : "enabled"}`);
+	if (number === "Shift" || number === "Control") {
 		hints = !hints;
 	}
 
-	if (evt.key === "Delete" || evt.key === "Backspace") {
-		selected.querySelector('p').innerText = "";
+	if (number === "Delete" || number === "Backspace") {
+		cell.querySelector('p').innerText = "";
 	}
 
-	const num = parseInt(evt.key);
+	const num = parseInt(number);
 	if (!isNaN(num)) {
-		selected.querySelector('p').innerText = num;
+		cell.querySelector('p').innerText = num;
 	}
+}
+
+document.addEventListener('keydown', evt => {
+	setNumber({ number: evt.key });
 });
