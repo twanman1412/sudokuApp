@@ -1,4 +1,4 @@
-import { addCell } from "./cellLogic.js";
+import { addCell, initGameState } from "./cellLogic.js";
 
 export function createBoard(parentDiv) {
 
@@ -15,19 +15,20 @@ export function createBoard(parentDiv) {
 			newCell.classList.add(`c${(cellId + boxId) % 2}`);
 			//NOTE : Cell Id system for future usage
 			// newCell.id = `cell${boxId}.${cellId}`;
-			newBox.appendChild(newCell);
 
 			const num = document.createElement('p');
+			newCell.appendChild(num);
 
 			const hints = document.createElement('div');
-			hints.classList.add('hint');
-
-			newCell.appendChild(num);
+			hints.classList.add('hints');
 			newCell.appendChild(hints);
 
+			newBox.appendChild(newCell);
 			addCell(newCell, boxId, cellId);
 		}
 
 		parentDiv.appendChild(newBox);
 	}
+
+	initGameState();
 }

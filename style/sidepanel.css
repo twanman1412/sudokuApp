@@ -38,3 +38,8 @@ div#numbers div.numbutton {
 
 	text-align: center;
 }
+
+div#numbers div.numbutton.selected {
+
+	background-color: lightblue;
+}

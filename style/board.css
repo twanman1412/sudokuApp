@@ -53,3 +53,16 @@ div.cell p {
 	font-size: 50px;
 	text-align: center;
 }
+
+div.cell div.hints {
+
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+}
+
+div.cell div.hints p {
+
+	font-size: 15px;
+}
