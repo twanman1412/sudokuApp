@@ -4,7 +4,7 @@
   "description": "A sudoku app",
   "main": "js/electron.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,6 @@
   },
   "homepage": "https://github.com/twanman1412/sudokuApp#readme",
   "dependencies": {
-    "electron": "^33.2.0"
-  },
-  "scripts": {
-    "start": "electron ."
+    "electron": "^33.2.1"
   }
 }
