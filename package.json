@@ -4,7 +4,11 @@
   "description": "A sudoku app",
   "main": "js/electron.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "lint": "eslint js/**/*.js",
+    "lint:fix": "eslint js/**/*.js --fix",
+    "format": "prettier --write js/**/*.js *.html style/**/*.css",
+    "format:check": "prettier --check js/**/*.js *.html style/**/*.css"
   },
   "repository": {
     "type": "git",
@@ -21,5 +25,9 @@
   "homepage": "https://github.com/twanman1412/sudokuApp#readme",
   "dependencies": {
     "electron": "^33.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5"
   }
 }

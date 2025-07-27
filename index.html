@@ -1,39 +1,51 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sudoku App - Advanced Tree Navigation</title>
+		<meta
+			name="description"
+			content="Modern Sudoku app with tree-based move tracking and power-user keyboard controls"
+		/>
+		<meta name="author" content="Twan Kuipers" />
 
-<head>
-	<title>Sudoku App</title>
-	<script type='module' src='./js/main.js'></script>
-	<script type='module' src='./js/createBoard.js'></script>
-	<script type='module' src='./js/cellLogic.js'></script>
+		<!-- Module Scripts -->
+		<script type="module" src="./js/main.js"></script>
+		<script type="module" src="./js/gameState.js"></script>
+		<script type="module" src="./js/cellLogic.js"></script>
+		<script type="module" src="./js/treeNavigation.js"></script>
+		<script type="module" src="./js/keyboardControls.js"></script>
+		<script type="module" src="./js/createBoard.js"></script>
 
-	<link rel='stylesheet' href='./style/board.css' />
-	<link rel='stylesheet' href='./style/index.css' />
-	<link rel='stylesheet' href='./style/sidepanel.css' />
-</head>
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="./style/index.css" />
+		<link rel="stylesheet" href="./style/board.css" />
+		<link rel="stylesheet" href="./style/sidepanel.css" />
+	</head>
 
-<body>
-	<div id='main'>
-	</div>
+	<body>
+		<div id="main"></div>
 
-	<div id='sidepanel'>
-		<div id='controls'>
-			<div id='border-hints' class='control-button'>Border Hints: OFF</div>
-			<div id='center-hints' class='control-button'>Center Hints: OFF</div>
+		<div id="sidepanel">
+			<div id="info-button" class="info-toggle">
+				<span>ℹ️</span>
+			</div>
+			<div id="controls-panel" class="controls-hidden">
+				<div class="help-section">
+					<strong>Power User Controls:</strong><br />
+					<span>1-9: Enter numbers</span><br />
+					<span>Alt+1-9: Border hints</span><br />
+					<span>Ctrl+1-9: Center hints</span><br />
+					<span>Delete: Clear cell</span><br />
+					<span>Backspace: Go back in tree</span><br />
+					<span>← →: Navigate tree</span><br />
+					<span>T: Toggle tree mode</span>
+				</div>
+			</div>
+			<div id="tree-view">
+				<!-- Tree navigation will be displayed here -->
+			</div>
 		</div>
-		<div id='numbers'>
-			<div id='1' class='numbutton'>1</div>
-			<div id='2' class='numbutton'>2</div>
-			<div id='3' class='numbutton'>3</div>
-			<div id='4' class='numbutton'>4</div>
-			<div id='5' class='numbutton'>5</div>
-			<div id='6' class='numbutton'>6</div>
-			<div id='7' class='numbutton'>7</div>
-			<div id='8' class='numbutton'>8</div>
-			<div id='9' class='numbutton'>9</div>
-			<div id='Delete' class='numbutton'>Clear</div>
-		</div>
-	</div>
-</body>
-
+	</body>
 </html>
